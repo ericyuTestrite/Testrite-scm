@@ -26,11 +26,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="odd gradeX">
-                                <td>Metal Levarage</td>
-                                <td>11"x10"x20"</td>
-                                <td class="center">12</td>
-                                <td class="center">1</td>
+                            <tr class="odd gradeX" ng-repeat="demandData in demandDataList">
+                                <td>{{demandData.itemName}}</td>
+                                <td>{{demandData.dimHeight}}"x{{demandData.dimWidth}}"x{{demandData.dimDepth}}"</td>
+                                <td class="center">{{demandData.packQunatity}}</td>
+                                <td class="center">{{demandData.inventoryQty}}</td>
                                 <td class="center"><input type="text"></input></td>
                             </tr>
                         </tbody>
@@ -39,7 +39,7 @@
                 <input type="button" class="btn btn-primary pull-right" value="Submit"/>
         </div>
         <!-- /.panel -->
-        
+
     </div>
 
     <!-- /.col-lg-12 -->

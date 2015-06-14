@@ -12,7 +12,7 @@ angular
     'oc.lazyLoad',
     'ui.router',
     'ui.bootstrap',
-    'angular-loading-bar',
+    'angular-loading-bar'
   ])
   .config(['$stateProvider','$urlRouterProvider','$ocLazyLoadProvider',function ($stateProvider,$urlRouterProvider,$ocLazyLoadProvider) {
     
@@ -93,9 +93,22 @@ angular
           }
         }
       })
+
+      // demend planner
       .state('dashboard.demand-planner',{
         templateUrl:'views/scm/demand-planner.html',
-        url:'/demand-planner'
+        controller: 'DemandCtrl',
+        url:'/demand-planner',
+        resolve: {
+          loadMyFiles:function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name:'sbAdminApp',
+              files:[
+              'scripts/controllers/main.js'
+              ]
+            })
+          }
+        }
     })
       .state('dashboard.form',{
         templateUrl:'views/form.html',
