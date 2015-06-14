@@ -93,6 +93,10 @@ angular
           }
         }
       })
+      .state('dashboard.demand-planner',{
+        templateUrl:'views/scm/demand-planner.html',
+        url:'/demand-planner'
+    })
       .state('dashboard.form',{
         templateUrl:'views/form.html',
         url:'/form'
