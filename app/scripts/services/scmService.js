@@ -6,7 +6,7 @@ angular.module('sbAdminApp')
        getDemandTemplate: function(){
     		var demandData = [
     			{
-    				itemName: 'Metal Leverage',
+    				itemName: 'Metal',
     				dimHeight: 10,
     				dimWidth: 20,
     				dimDepth: 10,
@@ -15,7 +15,7 @@ angular.module('sbAdminApp')
     				inventoryQty: 30
     			},
     			{
-    				itemName: 'Bronize Leverage',
+    				itemName: 'Bronize',
     				dimHeight: 10,
     				dimWidth: 20,
     				dimDepth: 10,
@@ -24,7 +24,7 @@ angular.module('sbAdminApp')
     				inventoryQty: 30
     			},
     			{
-    				itemName: 'Gold Leverage',
+    				itemName: 'Gold',
     				dimHeight: 10,
     				dimWidth: 20,
     				dimDepth: 10,
